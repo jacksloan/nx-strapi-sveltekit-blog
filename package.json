@@ -7,7 +7,8 @@
     "start:api": "env-cmd npx nx serve api",
     "openapi": "openapi-generator-cli",
     "start:web": "env-cmd npx nx serve frontend",
-    "codegen": "openapi-generator-cli generate -i ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation.json -o libs/api-client/src/lib -g typescript-axios --skip-validate-spec",
+    "fix-codegen-json": "sed 's/\"=\"/\"_eq\"/g' ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation.json > ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation_fixed.json",
+    "codegen": "npm run fix-codegen-json && swagger-nodegen-cli generate -i ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation_fixed.json -o libs/api-client/src/lib -l typescript-axios",
     "build": "nx build",
     "test": "nx test"
   },
@@ -36,6 +37,7 @@
     "prettier": "^2.3.1",
     "svelte": "^3.35.0",
     "svelte-preprocess": "^4.0.0",
+    "swagger-nodegen-cli": "^3.0.24",
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3",
     "vite": "^2.1.0"
