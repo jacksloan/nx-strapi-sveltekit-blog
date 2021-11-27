@@ -5,8 +5,9 @@
   "scripts": {
     "start": "nx serve",
     "start:api": "env-cmd npx nx serve api",
+    "openapi": "openapi-generator-cli",
     "start:web": "env-cmd npx nx serve frontend",
-    "client-codegen": "openapi-generator-cli version",
+    "codegen": "openapi-generator-cli generate -i ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation.json -o libs/api-client/src/lib -g typescript-axios --skip-validate-spec",
     "build": "nx build",
     "test": "nx test"
   },
