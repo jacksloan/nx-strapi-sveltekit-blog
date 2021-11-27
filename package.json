@@ -9,12 +9,27 @@
   },
   "private": true,
   "devDependencies": {
+    "@nrwl/angular": "^13.2.2",
     "@nrwl/cli": "13.2.2",
+    "@nrwl/eslint-plugin-nx": "13.2.2",
+    "@nrwl/linter": "13.2.2",
     "@nrwl/tao": "13.2.2",
     "@nrwl/workspace": "13.2.2",
     "@nx-extend/strapi": "^2.0.1",
+    "@nxext/sveltekit": "^12.0.0-next.1",
+    "@sveltejs/adapter-node": "next",
+    "@sveltejs/kit": "next",
     "@types/node": "14.14.33",
+    "@typescript-eslint/eslint-plugin": "~4.33.0",
+    "@typescript-eslint/parser": "~4.33.0",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-svelte3": "^3.1.2",
     "prettier": "^2.3.1",
-    "typescript": "~4.4.3"
-  }
+    "svelte": "^3.35.0",
+    "svelte-preprocess": "^4.0.0",
+    "typescript": "~4.4.3",
+    "vite": "^2.1.0"
+  },
+  "dependencies": {}
 }

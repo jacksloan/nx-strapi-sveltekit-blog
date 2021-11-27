@@ -1,0 +1,30 @@
+{
+  "root": "apps/frontend",
+  "projectType": "application",
+  "sourceRoot": "apps/frontend/src",
+  "targets": {
+    "build": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "build"
+      }
+    },
+    "serve": {
+      "executor": "@nxext/sveltekit:sveltekit",
+      "options": {
+        "command": "dev"
+      }
+    },
+    "add": {
+      "executor": "@nxext/sveltekit:add"
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/frontend/**/*.{ts,svelte,spec.ts}"]
+      }
+    }
+  },
+  "tags": []
+}
