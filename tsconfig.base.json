@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@nx-sveltekit-strapi-blog/api-client": ["libs/api-client/src/index.ts"]
+      "@nx-sveltekit-strapi-blog/api-client": ["libs/api-client/src/index.ts"],
+      "$lib": ["apps/frontend/src/lib"],
+      "$lib/*": ["apps/frontend/src/lib/*"]
     }
   },
   "exclude": ["node_modules", "tmp"]

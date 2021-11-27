@@ -8,7 +8,7 @@
     "openapi": "openapi-generator-cli",
     "start:web": "env-cmd npx nx serve frontend",
     "fix-codegen-json": "sed 's/\"=\"/\"_eq\"/g' ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation.json > ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation_fixed.json",
-    "codegen": "npm run fix-codegen-json && swagger-nodegen-cli generate -i ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation_fixed.json -o libs/api-client/src/lib -l typescript-axios",
+    "codegen": "npm run fix-codegen-json && swagger-nodegen-cli generate -i ./apps/api/extensions/documentation/documentation/1.0.0/full_documentation_fixed.json -o libs/api-client/src/lib -l typescript-fetch",
     "build": "nx build",
     "test": "nx test"
   },
@@ -27,7 +27,7 @@
     "@sveltejs/adapter-node": "next",
     "@sveltejs/kit": "next",
     "@types/jest": "27.0.2",
-    "@types/node": "14.14.33",
+    "@types/node": "^14.14.33",
     "@typescript-eslint/eslint-plugin": "~4.33.0",
     "@typescript-eslint/parser": "~4.33.0",
     "eslint": "7.32.0",
@@ -43,7 +43,9 @@
     "vite": "^2.1.0"
   },
   "dependencies": {
+    "axios": "^0.24.0",
     "env-cmd": "^10.1.0",
+    "portable-fetch": "^3.0.0",
     "tslib": "^2.0.0"
   }
 }

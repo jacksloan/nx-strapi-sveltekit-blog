@@ -1,9 +1,8 @@
 <script context="module" lang="ts">
-  import * as api from 'asdf';
   export async function load({ fetch }) {
-    const response = await fetch('index.json');
-    const posts = await response.json();
-    return { posts };
+    const res = await fetch('index.json');
+    const posts = await res.json();
+    return { props: { posts } };
   }
 </script>
 
