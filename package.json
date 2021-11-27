@@ -37,7 +37,6 @@
     "prettier": "^2.3.1",
     "svelte": "^3.35.0",
     "svelte-preprocess": "^4.0.0",
-    "swagger-nodegen-cli": "^3.0.24",
     "ts-jest": "27.0.5",
     "typescript": "~4.4.3",
     "vite": "^2.1.0"
