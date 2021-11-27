@@ -4,8 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
-    "start:api": "npx nx serve api",
-    "start:web": "npx nx serve frontend",
+    "start:api": "env-cmd npx nx serve api",
+    "start:web": "env-cmd npx nx serve frontend",
     "build": "nx build",
     "test": "nx test"
   },
@@ -33,5 +33,7 @@
     "typescript": "~4.4.3",
     "vite": "^2.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "env-cmd": "^10.1.0"
+  }
 }
