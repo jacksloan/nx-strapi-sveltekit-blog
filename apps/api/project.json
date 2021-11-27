@@ -1,0 +1,19 @@
+{
+  "root": "apps/api",
+  "projectType": "application",
+  "sourceRoot": "apps/api/src",
+  "targets": {
+    "serve": {
+      "executor": "@nx-extend/strapi:serve"
+    },
+    "build": {
+      "executor": "@nx-extend/strapi:build",
+      "configurations": {
+        "production": {
+          "production": true
+        }
+      }
+    }
+  },
+  "tags": []
+}
