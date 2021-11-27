@@ -6,6 +6,7 @@
     "start": "nx serve",
     "start:api": "env-cmd npx nx serve api",
     "start:web": "env-cmd npx nx serve frontend",
+    "client-codegen": "openapi-generator-cli version",
     "build": "nx build",
     "test": "nx test"
   },
