@@ -6,12 +6,19 @@
   }
 </script>
 
-<script>
-  export let posts;
+<script lang="ts">
+  import type { Posts } from '@nx-sveltekit-strapi-blog/api-client';
+  export let posts: Posts[];
   $: console.log(posts);
 </script>
 
-<h1>Welcome to SvelteKit</h1>
-<p>
-  Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation
-</p>
+<h1>Blog</h1>
+
+{#each posts as p}
+  <article>
+    <h3>{p.title}</h3>
+    <p>
+      {p.content}
+    </p>
+  </article>
+{/each}
