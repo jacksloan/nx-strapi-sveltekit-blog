@@ -1,0 +1,6 @@
+{
+  "name": "@nx-strapi-sveltekit-blog/api-client",
+  "scripts": {
+    "build": "tsc"
+  }
+}

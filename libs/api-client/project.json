@@ -1,0 +1,14 @@
+{
+  "root": "libs/api-client",
+  "projectType": "library",
+  "sourceRoot": "libs/api-client/src/lib",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "build"
+      }
+    }
+  },
+  "tags": []
+}

@@ -13,10 +13,10 @@ const config = {
     vite: {
       resolve: {
         alias: {
-          '@nx-sveltekit-strapi-blog/api-client': path.resolve(
+          '@nx-strapi-sveltekit-blog/api-client': path.resolve(
             '../../libs/api-client/src/lib/index.ts'
           ),
-          '$lib': path.resolve('./src/lib'),
+          $lib: path.resolve('./src/lib'),
         },
       },
     },

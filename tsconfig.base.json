@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "$lib": ["apps/frontend/src/lib"],
-      "$lib/*": ["apps/frontend/src/lib/*"]
+      "$lib/*": ["apps/frontend/src/lib/*"],
+      "@nx-strapi-sveltekit-blog/api-client": ["libs/api-client/src/lib/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

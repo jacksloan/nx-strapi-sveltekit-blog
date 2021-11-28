@@ -1,14 +1,12 @@
-import { STRAPI_JWT as accessToken } from '$lib/secrets';
+import {
+  OpenAPI,
+  Posts,
+  PostsService,
+  Error,
+} from '@nx-strapi-sveltekit-blog/api-client';
+import { STRAPI_JWT } from '../lib/secrets';
+OpenAPI.TOKEN = STRAPI_JWT;
 
-export async function get(): Promise<any> {
-  try {
-    const url = 'http://localhost:1337/posts';
-    const headers = { Authorization: `Bearer ${accessToken} ` };
-    const response = await fetch(url, { headers });
-    const posts = await response.json();
-    return { body: posts };
-  } catch (error) {
-    console.error(error?.message || error);
-    return { body: [] };
-  }
+export async function get(): Promise<{ body: Posts[] | Error }> {
+  return { body: await PostsService.getPosts() };
 }
