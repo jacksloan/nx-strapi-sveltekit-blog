@@ -44,9 +44,7 @@
     "vite": "^2.1.0"
   },
   "dependencies": {
-    "axios": "^0.24.0",
     "env-cmd": "^10.1.0",
-    "portable-fetch": "^3.0.0",
     "tslib": "^2.0.0"
   }
 }
