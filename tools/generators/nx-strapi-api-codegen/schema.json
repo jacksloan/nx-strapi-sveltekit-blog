@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
   "cli": "nx",
-  "$id": "nx-openapi-generator",
+  "$id": "nx-strapi-api-codegen",
   "type": "object",
   "properties": {
     "name": {
@@ -11,7 +11,15 @@
         "$source": "argv",
         "index": 0
       }
+    },
+    "openapi-json": {
+      "type": "string",
+      "description": "Path to openapi spec file",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      }
     }
   },
-  "required": ["name"]
+  "required": ["name", "openapi-json"]
 }
